@@ -10,6 +10,10 @@ const app = express();
 // virtual ports (65300 somethings, free port)
 // const port = 4000;
 
+const githubData = {
+	username: "purohitdheeraj",
+};
+
 app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
@@ -24,6 +28,10 @@ app.get("/login", (req, res) => {
 
 app.get("/youtube", (req, res) => {
 	res.send("<h2>Hare Krishna</h2>");
+});
+
+app.get("/github", (req, res) => {
+	res.json(githubData);
 });
 
 app.listen(process.env.PORT, () => {
