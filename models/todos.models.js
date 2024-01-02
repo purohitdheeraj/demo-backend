@@ -7,7 +7,7 @@ const todoSchema = new mongoose.Schema(
 			required: true,
 		},
 		createdBy: {
-			type: Schema.Types.ObjectId,
+			type: mongoose.Schema.Types.ObjectId,
 			ref: "User",
 		},
 		isCompleted: {
@@ -16,7 +16,7 @@ const todoSchema = new mongoose.Schema(
 		},
 		subTodos: [
 			{
-				type: Schema.Types.ObjectId,
+				type: mongoose.Schema.Types.ObjectId,
 				ref: "SubTodos",
 			},
 		],

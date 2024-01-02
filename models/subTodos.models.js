@@ -7,7 +7,7 @@ const subTodosSchema = new mongoose.Schema(
 			required: true,
 		},
 		createdBy: {
-			type: Schema.Types.ObjectId,
+			type: mongoose.Schema.Types.ObjectId,
 			ref: "User",
 		},
 		markedAsDone: {
